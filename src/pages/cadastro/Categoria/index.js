@@ -22,8 +22,10 @@ function CadastroCategoria() {
   }
 
   // function handleChange(infosDoEvento) {
-  //   const { name, value } = infosDoEvento.target;
-  //   setValue(name, value);
+  //   setValue(
+  //     infosDoEvento.target.getAttribute('name'),
+  //     infosDoEvento.target.value,
+  //   );
   // }
 
   function handleChange(e) {
@@ -31,8 +33,9 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const URL_TOP = 'http://localhost:8080/categorias';
-
+    const URL_TOP = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://ivisflix.herokuapp.com/categorias';
     fetch(URL_TOP)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
@@ -109,14 +112,13 @@ function CadastroCategoria() {
 
       {categorias.length === 0 && (
       <div>
-
         Loading...
       </div>
       )}
 
       <ul>
-        {categorias.map((categoria, indice) => (
-          <li key={`${categoria}${indice}`}>
+        {categorias.map((categoria) => (
+          <li key={`${categoria.nome}`}>
             {categoria.nome}
           </li>
         ))}
