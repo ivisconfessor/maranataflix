@@ -5,9 +5,11 @@ function SobreNos() {
   return (
     <PageDefault>
       <p>
-        Aqui você encontra os melhores conteúdos gospel para você curtir!
+        <b>Se conecte com Deus...</b>
         <br/>
-        Aproveite!
+        Aqui você encontra os melhores conteúdos cristãos para você se conectar com Deus!
+        <br/>
+        Maranata!
       </p>
     </PageDefault>
   );

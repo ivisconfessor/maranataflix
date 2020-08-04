@@ -1,6 +1,6 @@
 import React from 'react';
 import { FooterBase } from './styles';
-import Logo from '../../assets/img/LogoGospelFlix.png';
+import Logo from '../../assets/img/LogoMaranataFlix.png';
 
 function Footer() {
   return (

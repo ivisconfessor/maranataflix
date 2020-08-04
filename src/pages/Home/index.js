@@ -3,6 +3,11 @@ import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import PageDefault from '../../components/PageDefault';
 import categoriasRepository from '../../repositories/categorias';
+import Carregando from '../../assets/img/loading.gif'
+
+const divStyle = {
+  textAlign: 'center'
+};
 
 function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
@@ -21,7 +26,7 @@ function Home() {
 
   return (
     <PageDefault paddingAll={0}>
-      {dadosIniciais.length === 0 && (<div>Loading...</div>)}
+      {dadosIniciais.length === 0 && (<div style={divStyle}><img src={Carregando} /></div>)}
 
       {dadosIniciais.map((categoria, indice) => {
         if (indice === 0) {
