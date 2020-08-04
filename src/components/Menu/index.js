@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from  'react-router-dom';
-import Logo from '../../assets/img/LogoIvisFlix.png';
+import Logo from '../../assets/img/LogoGospelFlix.png';
 import './Menu.css';
 import  Button from '../Button'
 // import ButtonLink from './components/ButtonLink';
@@ -8,12 +8,12 @@ import  Button from '../Button'
 function Menu() {
     return (
         <nav className="Menu"> 
-            <a to="/">
+            <a href="/">
                 <img className="Logo" src={Logo} alt="Logo IvisFlix" />
             </a>
 
-            <Button as={Link} className="ButtonLink" to="/cadastro/video">
-                Novo vídeo
+            <Button as={Link} className="ButtonLink" to="/SobreNos">
+                Sobre Nós
             </Button>
         </nav>
     )
