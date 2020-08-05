@@ -60,22 +60,13 @@
       "id": 3,
       "categoriaId": 1,
       "titulo": "A ÚLTIMA BATALHA - FILME COMPLETO",
-<<<<<<< HEAD
       "url": "https://www.youtube.com/watch?v=HHXvkQegquM&t"
-=======
-      "url": "https://www.youtube.com/watch?v=HHXvkQegquM"
->>>>>>> 3db8bf3619cc556eb1a4a41ebfc52fb6c2ae4a2f
     },
     {
       "id": 4,
       "categoriaId": 1,
-<<<<<<< HEAD
       "titulo": "O Carpinteiro - Filme Completo (Dublado)",
       "url": "https://www.youtube.com/watch?v=LsqQe0SetJM"
-=======
-      "titulo": "VOCÊ ACREDITA? *FILME GOSPEL COMPLETO",
-      "url": "https://www.youtube.com/watch?v=Jujbk7PItoE"
->>>>>>> 3db8bf3619cc556eb1a4a41ebfc52fb6c2ae4a2f
     },
     {
       "id": 5,

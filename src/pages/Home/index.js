@@ -3,14 +3,12 @@ import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import PageDefault from '../../components/PageDefault';
 import categoriasRepository from '../../repositories/categorias';
-<<<<<<< HEAD
-=======
-import Carregando from '../../assets/img/loading.gif'
+import Carregando from '../../assets/img/loading2.gif'
 
-const divStyle = {
-  textAlign: 'center'
+const imgStyle = {
+  width: '200px',
+  height: '200px'
 };
->>>>>>> 3db8bf3619cc556eb1a4a41ebfc52fb6c2ae4a2f
 
 function Home() {
   const [dadosIniciais, setDadosIniciais] = useState([]);
@@ -29,11 +27,9 @@ function Home() {
 
   return (
     <PageDefault paddingAll={0}>
-<<<<<<< HEAD
-      {dadosIniciais.length === 0 && (<div>Loading...</div>)}
-=======
-      {dadosIniciais.length === 0 && (<div style={divStyle}><img src={Carregando} /></div>)}
->>>>>>> 3db8bf3619cc556eb1a4a41ebfc52fb6c2ae4a2f
+      {dadosIniciais.length === 0 && (<div style={{textAlign: 'center'}}>
+        <img src={Carregando} style={imgStyle} />
+        <br/><h3>Carregando...</h3></div>)}
 
       {dadosIniciais.map((categoria, indice) => {
         if (indice === 0) {
@@ -60,36 +56,6 @@ function Home() {
         );
       })}
 
-<<<<<<< HEAD
-=======
-
-      {/* <BannerMain
-        videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-        url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[0]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[1]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[2]}
-      />
-
-      <Carousel
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[3]}
-      /> */}
-
->>>>>>> 3db8bf3619cc556eb1a4a41ebfc52fb6c2ae4a2f
     </PageDefault>
   );
 }
