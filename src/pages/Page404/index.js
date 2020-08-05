@@ -13,7 +13,7 @@ function Page404() {
         <p style={pStyle}>
             <img src={Gif404} />
             <br/>
-            A página que você está procurando não existe :(! 
+            A página que você está procurando não existe :(!! 
             <br/>
             <Link to="/">
               Ir para Home
