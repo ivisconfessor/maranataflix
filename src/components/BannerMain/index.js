@@ -3,7 +3,7 @@ import VideoIframeResponsive from './components/VideoIframeResponsive';
 import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles';
 
 function viewVideoToYouTube() {
-  window.location.href = 'https://www.youtube.com/watch?v=ol_2pmyPzvI';
+  window.location.href = 'https://www.youtube.com/watch?v=gXeVlGnBLp8';
 }
 
 function getYouTubeId(youtubeURL) {
