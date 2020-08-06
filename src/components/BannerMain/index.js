@@ -1,10 +1,14 @@
 import React from 'react';
 import VideoIframeResponsive from './components/VideoIframeResponsive';
 import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles';
+// importar useHistory para redirecionar a rota e 'watch.json' para capturar a ID do vídeo
+import { useHistory } from 'react-router-dom'
+import json from '../../data/watch.json';
 
-function viewVideoToYouTube() {
-  window.location.href = 'https://www.youtube.com/watch?v=gXeVlGnBLp8';
-}
+
+// function viewVideoToYouTube() {
+//   window.location.href = 'https://www.youtube.com/watch?v=gXeVlGnBLp8';
+// }
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL
@@ -21,6 +25,12 @@ export default function BannerMain({
 }) {
   const youTubeID = getYouTubeId(url);
   const bgUrl = `https://img.youtube.com/vi/${youTubeID}/maxresdefault.jpg`;
+
+  const history = useHistory();
+  const navigateTo = () => {
+    json.id = youTubeID;
+    history.push('/Watch')
+  };
 
   return (
     <BannerMainContainer backgroundImage={bgUrl}>
@@ -39,7 +49,7 @@ export default function BannerMain({
           <VideoIframeResponsive
             youtubeID={youTubeID}
           />
-          <WatchButton onClick={viewVideoToYouTube}>
+          <WatchButton onClick={navigateTo}>
             Assistir
           </WatchButton>
         </ContentAreaContainer.Item>

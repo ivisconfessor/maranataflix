@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.css'; 
+import Watch from './pages/Watch'
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -12,6 +13,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/" component={Home} exact />
       <Route path="/SobreNos" component={SobreNos} />
+      <Route path="/Watch" component={Watch} /> 
       <Route path="/" component={Pagina404} />
     </Switch>
   </BrowserRouter>,
